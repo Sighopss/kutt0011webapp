@@ -27,11 +27,12 @@ jobs:
           repo_token: ${{ secrets.GITHUB_TOKEN }}
           action: "upload"
           
-          # THESE 4 LINES ARE THE REAL FIX
-          app_location: "/"           # your index.html is in the root
-          output_location: "."        # same as root
-          skip_app_build: true        # ← THIS SKIPS ORYX COMPLETELY
-          skip_api_build: true        # ← no API anyway
+          # CORE CONFIG FOR PLAIN HTML (NO BUILD)
+          app_location: "/"           # Root folder with index.html
+          output_location: "."        # Deploy from root (dot = current dir)
+          skip_app_build: true        # Skip frontend build
+          skip_api_build: true        # Skip API build (no API)
+          is_static_export: true      # ← THIS FORCES STATIC HTML MODE (ignores Node detection)
 
   close_pull_request_job:
     if: github.event_name == 'pull_request' && github.event.action == 'closed'
