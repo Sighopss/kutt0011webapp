@@ -30,7 +30,6 @@ jobs:
           # CORE CONFIG FOR PLAIN HTML (NO BUILD)
           app_location: "/"           # Root folder with index.html
           output_location: "."        # Deploy from root (dot = current dir)
-          app_build_command: ""       # Empty build command to prevent Oryx from looking for build scripts
           skip_app_build: true        # Skip frontend build
           skip_api_build: true        # Skip API build (no API)
 

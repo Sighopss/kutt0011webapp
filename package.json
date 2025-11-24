@@ -1,0 +1,9 @@
+{
+  "name": "kutt0011webapp",
+  "version": "1.0.0",
+  "description": "Static HTML web app",
+  "scripts": {
+    "build": "echo 'No build needed for static HTML'"
+  }
+}
+
